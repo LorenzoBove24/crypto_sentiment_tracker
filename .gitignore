@@ -1,0 +1,15 @@
+# Ignora la cartella dell'ambiente virtuale (è pesante e inutile da caricare)
+venv/
+env/
+
+# Ignora i file compilati di Python (si rigenerano da soli)
+__pycache__/
+*.pyc
+
+# Ignora i Database (i dati non vanno mai su GitHub!)
+*.db
+*.sqlite3
+data/*.db
+
+# Ignora le variabili d'ambiente (qui ci vanno le password)
+.env
