@@ -1,8 +1,10 @@
 import pandas as pd
 import feedparser
 
+#URL of the RSS from the website cointelegraph
 RSS_URL = "https://cointelegraph.com/rss"
 
+#function to get the title, date and link of the last news published on the website and create a dataframe
 def get_crypto_news():
     feed = feedparser.parse(RSS_URL)
     news_list = []
