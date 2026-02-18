@@ -1,6 +1,6 @@
 import pandas as pd
 import feedparser
-from analyzer import get_sentiment
+from src.analyzer import get_sentiment
 
 
 #URL of the RSS from the website cointelegraph
