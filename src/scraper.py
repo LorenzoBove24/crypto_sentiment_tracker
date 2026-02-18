@@ -1,5 +1,7 @@
 import pandas as pd
 import feedparser
+from analyzer import get_sentiment
+
 
 #URL of the RSS from the website cointelegraph
 RSS_URL = "https://cointelegraph.com/rss"
@@ -11,10 +13,13 @@ def get_crypto_news():
 
     for entry in feed.entries:
 
+        score = get_sentiment(entry.title)
+
         dic_new = {
             "title" : entry.title,
-            "date" : entry.published,
-            "link" : entry.link
+            "published" : entry.published,
+            "link" : entry.link,
+            "sentiment" : score
         }
         news_list.append(dic_new)
     
@@ -22,6 +27,7 @@ def get_crypto_news():
     return df
 
 
+#TESTING
 
 if __name__ == "__main__":
     df = get_crypto_news()

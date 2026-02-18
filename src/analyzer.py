@@ -20,7 +20,7 @@ def get_sentiment(text):
     return scores["compound"]
 
 
-
+#TESTING
 
 if __name__ == "__main__":
     print(get_sentiment("Bitcoin is good, great and the best investment!"))
