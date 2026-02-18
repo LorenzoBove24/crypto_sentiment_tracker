@@ -21,6 +21,7 @@ def get_sentiment(text):
 
 
 
+
 if __name__ == "__main__":
     print(get_sentiment("Bitcoin is good, great and the best investment!"))
     print(get_sentiment("Bitcoin is bad, terrible and the worst loss ever."))
